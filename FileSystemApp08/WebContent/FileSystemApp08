@@ -1,0 +1,19 @@
+■■■ FileSystemApp08 ■■■
+
+○ 실습 내용
+   파일 업로드 - 하나의 파일 업로드 및 다운로드
+   
+○ 물리적 파일 구성
+
+   1. WebContent > WEB-INF > lib > jstl.jar
+   1. WebContent > WEB-INF > lib > standard.jar
+   1. WebContent > WEB-INF > lib > cos.jar		<< check~!~
+   
+   
+   4. Java Resources > src > com.util.FileManager.java
+   5. WebContent > filetest > Write.jsp
+   5. WebContent > filetest > Write_ok.jsp
+   5. WebContent > filetest > Download.jsp
+   
+   
+   

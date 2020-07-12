@@ -1,0 +1,62 @@
+■■■ FileSystemApp11 ■■■
+
+○ 실습 내용
+   파일 업로드 - 데이터 베이스 연동을 포함한 업로드 실습
+   
+○ 물리적 파일 구성
+   0. FileSystemApp11_scott.sql
+   
+   1. WebContent > WEB-INF > lib > jstl.jar							ㅇ
+   2. WebContent > WEB-INF > lib > standard.jar						ㅇ
+   3. WebContent > WEB-INF > lib > cos.jar			<< check~!~		ㅇ
+   4. WebContent > WEB-INF > lib > ojdbc6.jar		<< check~!~		ㅇ
+   
+   22. Java Resources > src > com.util.DBCPConn.java				ㅇ
+
+   16. Java Resources > src > com.image.ImageDTO.java				ㅇ
+   15. Java Resources > src > com.image.ImageDAO.java  				ㅇ
+   
+   
+   19. Java Resources > src > com.member.MemberDTO.java   
+   18. Java Resources > src > com.member.MemberDAO.java
+
+   
+   
+   5. WebContent > WEB-INF > web.xml								
+   17. WebContent > data > css > member > member.css
+   18. WebContent > data > css > button.css
+   19. WebContent > data > css > style.css
+   12. WebContent > member > login.jsp
+   21. Java Resources > src > com.member.SessionInfo.java
+   10. WebContent > imageBoard > created.jsp   
+   9. WebContent > data > js > util.js
+   
+
+   11. WebContent > imageBoard > List.jsp
+   
+
+   13. WebContent > member > Member.jsp
+   
+   14. WebContent > menu > top.jsp
+   
+   
+   17. Java Resources > src > Com.image.ImageServlet.java
+   
+
+   20. Java Resources > src > com.member.MemberServlet.java
+
+   
+   24. Java Resources > src > com.util.FileManager.java
+   25. Java Resources > src > com.util.Myutil.java
+   
+   25. WebContent > index.jsp
+   
+ ○ 사용자 최초 요청 주소 
+ http://localhost:8090/FileSystemApp11/ 
+   
+
+   
+   
+   ※ check~!
+   『C:\SpringMVC\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FileSystemApp10 』 경로에
+   『fileSave』 디렉터리 생성 후 진행

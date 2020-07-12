@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>mvcApp00</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	<!-- Spring MVC Framework 등록  -->	
+	<!-- → Front Controller 등록 -->
+	<!-- → DispatcherServlet 객체 등록 -->
+	
+<!-- 	
+	dispatcher-servlet 은 안내 데스크 이런 것 들 다 해준다. 
+	<servlet>
+		<servlet-name>A</servlet-name>
+		<servlet-class>패키지 경로 포함 클래스 → 컨트롤러(사용자 정의 컨트롤러)</servlet-class>		
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>*.action</url-pattern>	
+	</servlet-mapping>
+	
+	 -->
+	 
+
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>	 org.springframework.web.servlet.DispatcherServlet</servlet-class>		
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>*.action</url-pattern>	
+	</servlet-mapping>
+	
+	<!-- check~!!! -->
+	<!-- 인코딩 필터 등록 -->
+	<!-- → CharacterEncodingFilter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		
+		<!-- 필터 파라미터 초기값 지정 -->
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		
+		
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
+</web-app>

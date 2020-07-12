@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body,p,span,input ,table,th,td,select
+{
+	font-size : 18px;
+	color : #343;
+	font-family :맑은 고딕;
+	
+	
+}
+.control
+{
+	border : 1px solid gray;
+	border-radius : 3px;
+	
+}
+
+.table
+{
+	border-collapse: collapse;
+	width:100%;
+	
+	
+}
+
+.table th, .table td
+{
+	border: 1px solid grey;
+	border-left:0px;
+	border-right:0px;
+	padding : 3px;
+	line-height:150%;
+	
+	
+}
+
+.table th
+{
+	
+	font-weigth : bold;
+	background-color:#EEE;
+	
+}
+
+
+.btn
+{
+	font-weight:bold;
+	
+	
+}
+
+
+.btn:hover
+{
+	
+}
+
+
+.cWrapper
+{
+	color: gray;
+	border: 1px solid;
+	height:100px;
+	width:800px;
+	magin: 0 auto;
+	
+}
+#conNo,#conW
+{
+	float:left;
+	width:100px;
+	text-align: center;
+	
+	
+	
+}
+#cont,#cond
+{
+	float:left;
+	width:300px;
+	text-align: center;
+	
+	
+}
+
+.inputBox
+{
+	display:flex;
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

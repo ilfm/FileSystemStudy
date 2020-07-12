@@ -1,0 +1,21 @@
+■■■ FileSystemApp08 ■■■
+
+○ 실습 내용
+   파일 업로드 - 여러개의 파일 업로드
+   
+○ 물리적 파일 구성
+
+   1. WebContent > WEB-INF > lib > jstl.jar
+   1. WebContent > WEB-INF > lib > standard.jar
+   1. WebContent > WEB-INF > lib > cos.jar		<< check~!~
+   
+   
+   4. Java Resources > src > com.util.FileManager.java
+   5. WebContent > filetest > Write.jsp
+   5. WebContent > filetest > Write_ok.jsp
+   5. WebContent > filetest > Download.jsp
+   
+   
+   ※ check~!
+   『C:\SpringMVC\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FileSystemApp10 』 경로에
+   『fileSave』 디렉터리 생성 후 진행
