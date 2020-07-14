@@ -1,20 +1,20 @@
-■■■ FileSystemApp11 ■■■
+�뼚�뼚�뼚 FileSystemApp11 �뼚�뼚�뼚
 
-○ 실습 내용
-   파일 업로드 - 데이터 베이스 연동을 포함한 업로드 실습
+�뿃 �떎�뒿 �궡�슜
+   �뙆�씪 �뾽濡쒕뱶 - �뜲�씠�꽣 踰좎씠�뒪 �뿰�룞�쓣 �룷�븿�븳 �뾽濡쒕뱶 �떎�뒿
    
-○ 물리적 파일 구성
+�뿃 臾쇰━�쟻 �뙆�씪 援ъ꽦
    0. FileSystemApp11_scott.sql
    
-   1. WebContent > WEB-INF > lib > jstl.jar							ㅇ
-   2. WebContent > WEB-INF > lib > standard.jar						ㅇ
-   3. WebContent > WEB-INF > lib > cos.jar			<< check~!~		ㅇ
-   4. WebContent > WEB-INF > lib > ojdbc6.jar		<< check~!~		ㅇ
+   1. WebContent > WEB-INF > lib > jstl.jar							�뀋
+   2. WebContent > WEB-INF > lib > standard.jar						�뀋
+   3. WebContent > WEB-INF > lib > cos.jar			<< check~!~		�뀋
+   4. WebContent > WEB-INF > lib > ojdbc6.jar		<< check~!~		�뀋
    
-   22. Java Resources > src > com.util.DBCPConn.java				ㅇ
+   5. Java Resources > src > com.util.DBCPConn.java				�뀋
 
-   16. Java Resources > src > com.image.ImageDTO.java				ㅇ
-   15. Java Resources > src > com.image.ImageDAO.java  				ㅇ
+   6. Java Resources > src > com.image.ImageDTO.java				�뀋
+   7. Java Resources > src > com.image.ImageDAO.java  				�뀋
    
    
    19. Java Resources > src > com.member.MemberDTO.java   
@@ -51,12 +51,12 @@
    
    25. WebContent > index.jsp
    
- ○ 사용자 최초 요청 주소 
+ �뿃 �궗�슜�옄 理쒖큹 �슂泥� 二쇱냼 
  http://localhost:8090/FileSystemApp11/ 
    
 
    
    
-   ※ check~!
-   『C:\SpringMVC\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FileSystemApp10 』 경로에
-   『fileSave』 디렉터리 생성 후 진행
+   �� check~!
+   �랢:\SpringMVC\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FileSystemApp10 �� 寃쎈줈�뿉
+   �럈ileSave�� �뵒�젆�꽣由� �깮�꽦 �썑 吏꾪뻾

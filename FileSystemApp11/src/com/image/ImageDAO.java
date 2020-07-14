@@ -1,5 +1,6 @@
 /*========================
   	ImageDAO.java
+  	- 페이징 처리 
 ==========================*/
 package com.image;
 
@@ -16,7 +17,7 @@ public class ImageDAO
 {
 	private Connection conn =  DBCPConn.getConnection();
 	
-	// 게시물 번호의 최대값 얻어오기
+	// 게시물 번호의 최대값 얻어오기 --> 왜지..?
 	public int getNumMax() 
 	{
 		int result =0;
@@ -43,7 +44,7 @@ public class ImageDAO
 		return result;
 	}// end getNumMax() 
 	
-	//
+	// 이미지 데이터 입력 메소드
 	public int insertData(ImageDTO dto) 
 	{
 		int result=0;
@@ -54,7 +55,7 @@ public class ImageDAO
 		{
 			String fields="NUM, USERID, SUBJECT, SAVEFILENAME";
 			
-			sql ="INSERT INTO IMAGEBOARD("+ fields +") VALUES(?,?,?,?)";
+			sql = "INSERT INTO IMAGEBOARD("+ fields +") VALUES(?,?,?,?)";
 			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, dto.getNum());
@@ -75,7 +76,7 @@ public class ImageDAO
 		
 	}
 	
-	// 게시물 전체 데이터 개수 확인
+	// 게시물 전체 데이터 개수 확인 (검색도 확인)
 	public int getTotalDataCount(String searchKey, String searchValue) 
 	{
 		int result =0;
@@ -86,16 +87,16 @@ public class ImageDAO
 		try
 		{
 			sql="SELECT COUNT(*) AS COUNT FROM(SELECT I.NUM AS NUM , M.USERID AS USERID, I.SUBJECT AS SUBJECT, M.USERNAME AS USERNAME FROM IMAGEBOARD I JOIN MEMBER M ON I.USERID = M.USERID)";
+			// searchValue 가 있다면 
 			if(searchValue != null && searchValue.length() != 0) 
 			{
-				sql+= " WHERE " + searchKey + " LIKE '%' || ? || '%'";
+				sql += " WHERE " + searchKey + " LIKE '%' || ? || '%'";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1,searchValue);
 				
 			}else
 			{
-				pstmt = conn.prepareStatement(sql);
-				
+				pstmt = conn.prepareStatement(sql);				
 			}
 			
 			rs = pstmt.executeQuery();
@@ -107,9 +108,7 @@ public class ImageDAO
 			
 			rs.close();
 			pstmt.close();
-			
-					
-			
+						
 			
 		} catch (Exception e)
 		{
@@ -151,7 +150,7 @@ public class ImageDAO
 			sb.append("        ON I.USERID = M.USERID");
 
 
-	
+			// 검색값이 있다면
 			if(searchValue != null && searchValue.length() != 0) 
 			{
 				
@@ -209,6 +208,7 @@ public class ImageDAO
 	}
 	
 	// 해당 게시물 상세 내용 얻어내기 
+	// 게시물 번호 넘기면 상세내용 얻어낸다.
 	public ImageDTO getReadData(int num) 
 	{
 		ImageDTO dto = null;
